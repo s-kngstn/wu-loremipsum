@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Wu Tang Lorem Ipsum Generator</title>
+  </head>
+  <body>
+    <h1 class="logo">Wu Tang Lorem Ipsum</h1>
+    <main>
+    <div class="form-container">
+
+        <div>
+          <input
+            class="input"
+            id="input"
+            type="text"
+            maxlength="3"
+            placeholder="5"
+            autocomplete="off"
+            size="2"
+          ></input>
+          <select name="selection" id="selection" class="input">
+            <option name="paragraphs" value="paragraphs">Paragraphs</option>
+            <option name="sentences" value="sentences">Sentences</option>
+            <option name="words" value="words">Words</option>
+          </select>
+          <button class="btn" id="btn">Generate</button>
+        </div>
+
+        <button class="btn copy" data-clipboard-target=".content-container">Copy text</button>
+      
+    </div>
+    <div class="content-container">
+      <p id="paragraph">I grew up on the crime side, the New York Times side. Stayin' alive was no jive. Had secondhands, Mom's bounced on old man so then we moved to Shaolin land. A young youth, yo, rockin' the gold tooth, 'Lo goose only way I begin the G off was drug loot and let's start it like this, son rollin' with this one and that one, pullin' out gats for fun.
+      But it was just a dream for the teen who was a fiend, started smokin' woolies at 16, and runnin' up in gates and doin' hits for high stakes makin' my way on fire escapes.
+      No question, I would speed for cracks and weed, The combination made my eyes bleed. No question, I would flow off and try to get the dough all stickin' up white boys in ball courts, My life got no better, same damn 'Lo sweater. Times is rough and tough like leather Figured out I went the wrong route
+      So I got with a sick-ass clique and went all out, Catchin' keys from 'cross seas Rollin' in MPV's, every week we made forty G's Yo, nigga, respect mine, or here go the TEC-9 Ch-chick-pow! Move from the gate now.</p>
+    </div>
+    </main>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+  <script type="module" src="/app.js"></script>
+  </body>
+</html>
