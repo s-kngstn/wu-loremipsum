@@ -39,11 +39,22 @@ main {
 .footer-nav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   list-style: none;
 }
 
 .footer-navlink {
   padding: 10px;
+  color: #ffcd00;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffcd00;
+}
+
+.icon {
+  color: #ffcd00;
 }
 
 hr {
