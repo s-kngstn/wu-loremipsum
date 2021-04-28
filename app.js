@@ -13,10 +13,8 @@ function shuffle(arr) {
 }
 
 function getWords(paraBlock, wordAmount){
-    let str = paraBlock;
-    let words = str.split(" ");
-    let finalWords = words.slice(0, wordAmount);
-    return finalWords.join(' ');
+    let words = paraBlock;
+    return words.split(" ").slice(0, wordAmount).join(' ').toLowerCase();
 }
 
 function getSentences(amount){
@@ -32,7 +30,6 @@ function getParas(amount){
     let para = [];
     for (let i = 0; i < amount; i++){
         let rng = Math.floor(Math.random() * 2) + 5;
-        // return <p>getSentences(6)</p>
         para.push(getSentences(rng));    
     }
     return para;
@@ -41,7 +38,7 @@ function getParas(amount){
 btn.addEventListener('click', function(){
   document.querySelector(".content-container").innerHTML = "";
   let num = document.querySelector("#input").value;
-  let newPara = document.createElement("p")
+  let newPara;
 
   if (selectionMenu.value === "words") {
     newPara = document.createElement("p")
