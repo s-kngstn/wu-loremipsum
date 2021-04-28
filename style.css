@@ -5,57 +5,149 @@
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 ::selection {
-  background: #000;
+  background: #d3c013;
+  color: #000;
 }
 
 ::-moz-selection {
-  background: #000;
+  background: #d3c013;
+  color: #000;
 }
 
 body {
-  background-color: #222;
-  color: #FFCD00;
+  background-color: #111;
+  color: #ffcd00;
   font-size: 20px;
 }
 
 main {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
+.footer {
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.footer-navlink {
+  padding: 10px;
+}
+
+hr {
+  background: #ffcd00;
+  height: 1px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.heading {
+  display: inline-block;
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  padding: 2rem;
+}
 
 .logo {
-  text-align: center;
-  padding: 2rem;
+  display: inline-block;
+  width: 200px;
+  height: 171px;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.instruction-container {
+  margin-bottom: 3rem;
+}
+
+.instruction-text {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: "Cormorant Garamond", serif;
+  color: #fdfacc;
+}
+
+.box {
+  padding: 0 1rem 2rem 1rem;
+  background-color: black;
+  box-shadow: 32px 30px 0px 0px rgba(255, 205, 0, 0.75);
+  -webkit-box-shadow: 32px 30px 0px 0px rgba(255, 205, 0, 0.75);
+  -moz-box-shadow: 32px 30px 0px 0px rgba(255, 205, 0, 0.75);
+
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .form-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 10px 3rem 10px;
+  padding: 2rem 10px 2rem 10px;
 }
 
-.input, .btn {
+.input,
+.btn {
   font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
   font-family: inherit;
-  padding: 0.25em 0.5em;
-  border: 1px solid #FFCD00;
-  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  outline: none;
 }
 
 .input {
-  background-color: #333;
-  color: #fff;
+  background-color: #111;
+  border: 1px solid #111;
+  color: #ffcd00;
   margin-right: 1rem;
 }
+
 .btn {
-  background-color: #FFCD00;
-  color: #333;
-  border: 2px solid #111;
+  background-color: #111;
+  border: 1px solid #ffcd00;
+  color: #ffcd00;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ffcd00;
+  color: #000;
+  border: 1px solid #ffcd00;
+  transition: all 0.15s ease-out;
 }
 
 .content-container {
@@ -64,4 +156,29 @@ main {
   justify-content: start;
   max-width: 100%;
   padding: 10px;
+}
+
+/* Startup Animation */
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
