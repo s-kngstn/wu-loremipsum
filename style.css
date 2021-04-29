@@ -95,7 +95,7 @@ select {
   display: flex;
   justify-content: center;
   padding: 2rem;
-  margin-top: 2rem;
+  margin-top: 10rem;
   -webkit-animation-duration: 10s;
   animation-duration: 10s;
   -webkit-animation-fill-mode: both;
@@ -226,6 +226,9 @@ select {
 
 @media screen and (max-width: 900px) {
 
+  .header {
+    margin-top: 5rem;
+  }
 
   .heading {
     font-size: 3rem;
