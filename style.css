@@ -213,7 +213,7 @@ hr {
 
 /* Media Queries */
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
 
 
   .heading {
@@ -255,7 +255,7 @@ hr {
 
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 760px) {
   .logo {
     width: 150px;
     height: 141px;
