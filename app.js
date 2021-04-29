@@ -1,12 +1,39 @@
 const sentences = [
-  "This is a sentence of words.",
-  "Today the goat went for a walk.",
-  "I like ice cream sandwiches because they are tasty.",
-  "I used to live in San Francisco, but now I live in London.",
-  "I really hope this is the better solution to this problem than my previous effort.",
-  "Sometimes in life we need a little randomness.",
-  "Lets all just talk about whats going on in the world today.",
-  "How many woods would a would chuck chuck, if a wood chuck could chuck wood.",
+  "I grew up on the crime side, the New York Times side, Stayin' alive was no jive.",
+  "Handcuffed in the back of a bus, forty of us.",
+  "Life as a shorty shouldn't be so rough.",
+  "We got stick-up kids, corrupt cops, and pop rocks.",
+  "Leave it up to me while I be livin' proof",
+  "To kick the truth to the young black youth.",
+  "Cash rules everything around me, dollar dollar bill, ya'll.",
+  "I smoke on the mic like smoking Joe Frazier, the hell raiser, raising hell with the flavor.",
+  "Terrorize the jam like troops in Pakistan, swinging through your town like your neighborhood Spiderman.",
+  "So uhh, tic toc and keep ticking, while I get you flipping off what I'm kicking.",
+  "The rebel, I make more noise than heavy metal.",
+  "Rae got it going on pal, call me the rap assassinator, rhymes rugged and built like Schwarzenegger.",
+  "Small change, they putting shame in the game.",
+  "Shame on you when you stepped through to The Ol Dirty Bastard straight from the Brooklyn Zoo.",
+  "Feeling mad hostile, ran the apostle, flowing like Christ when I speak the gospel.",
+  "The game of chess, is like a swordfight, you must think first before you move.",
+  "Well I'm a sire, I set the microphone on fire, rap styles vary and carry like Mariah.",
+  "If what you say is true, the Shaolin and the Wu-Tang could be dangerous.",
+  "I come rough, tough like an Elephant tusk.",
+  "Your head rush, fly like Egyptian musk.",
+  "I bomb atomically Socrates' philosophies and hypothesis can't define how I be dropping these mockeries.",
+  "Lyrically perform armed robbery, flee with the lottery, possibly they spotted me.",
+  "Shackling the masses with drastic rap tactics, graphic displays melt the steel like blacksmiths.",
+  "Behold the bold soldier control the globe slowly, proceeds to blow, swinging swords like Shinobi.",
+  "As the world turns I spread like germs, bless the globe with the pestilence, the hard-headed never learn.",
+  "Domino effect arts and crafts, paragraphs contain cyanide.",
+  "Olympic torch flaming we burn so sweet, the thrill of victory the agony defeat.",
+  "Perpendicular to the square we stay in gold like Flair, escape from your dragon's lair in particular.",
+  "My beats travel like a vortex through your spine, to the top of your cerebral cortex.",
+  "Yes, the rhythm, the rebel, alone in my level heat it up past the boiling point of metal.",
+  "Step through your section with the Force like Luke Skywalker, rhyme author, orchestrate mind torture.",
+  "I breaks it down to the bone gristle, Ill speaking Scud missile heat seeking, Johnny Blazing.",
+  "Nightmares like Wes Craven people gunning, my third eye seen it coming, before it happened.",
+  "Protect Ya Neck, my sword still remain imperial before I blast the mic, RZA scratch off the serial.",
+  "It was the night before New Year's all through the projects, not a handgun was silent, not even a Tec.",
 ];
 const selectionMenu = document.querySelector("#selection");
 const btn = document.querySelector("#btn");
@@ -22,7 +49,8 @@ function shuffleWords(arr) {
 }
 
 function getWords(words, wordAmount) {
-  return words.split(" ").slice(0, wordAmount).join(" ").toLowerCase();
+  let removeSpecialChars = /[^\w\s]/gi;
+  return words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(removeSpecialChars, '');
 }
 
 function getSentences(amount) {
@@ -38,7 +66,8 @@ function getSentences(amount) {
 function getParas(amount) {
   let para = [];
   for (let i = 0; i < amount; i++) {
-    let sentenceCount = Math.floor(Math.random() * 2) + 5;
+    // Randomly output 5-10 sentence paragraphs
+    let sentenceCount = Math.floor(Math.random() * 6) + 5;
     para.push(getSentences(sentenceCount));
   }
   return para;
@@ -46,7 +75,7 @@ function getParas(amount) {
 
 btn.addEventListener("click", () => {
   document.querySelector(".content-container").innerHTML = "";
-  const num = document.querySelector("#input").value;
+  let num = document.querySelector("#input").value;
   let newPara;
 
   if (selectionMenu.value === "words") {

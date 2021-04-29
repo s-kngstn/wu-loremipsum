@@ -147,6 +147,10 @@ hr {
   margin-right: 1rem;
 }
 
+.input:focus {
+  border-color: #ffcd00;
+}
+
 .btn {
   background-color: #111;
   border: 1px solid #ffcd00;
@@ -154,7 +158,7 @@ hr {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background: #ffcd00;
   color: #000;
   border: 1px solid #ffcd00;
