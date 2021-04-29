@@ -259,7 +259,7 @@ select {
 
   .input,
   .btn {
-    font-size: 10px;
+    font-size: 1.1rem;
     padding: 0.3rem 1.3rem;
     width: 90%;
   }
