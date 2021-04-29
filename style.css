@@ -8,16 +8,6 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
-::selection {
-  background: #d3c013;
-  color: #000;
-}
-
-::-moz-selection {
-  background: #d3c013;
-  color: #000;
-}
-
 body {
   background-color: #111;
   color: #ffcd00;
@@ -29,32 +19,16 @@ main {
   margin: 0 auto;
 }
 
-.footer {
-  padding-top: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Utils */
+
+::selection {
+  background: #d3c013;
+  color: #000;
 }
 
-.footer-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  list-style: none;
-}
-
-.footer-navlink {
-  padding: 10px;
-  color: #ffcd00;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #ffcd00;
-}
-
-.icon {
-  color: #ffcd00;
+::-moz-selection {
+  background: #d3c013;
+  color: #000;
 }
 
 hr {
@@ -64,71 +38,6 @@ hr {
   margin-bottom: 15px;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  margin-top: 2rem;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.heading {
-  display: inline-block;
-  text-align: center;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 300;
-  padding: 2rem;
-}
-
-.logo {
-  display: inline-block;
-  width: 200px;
-  height: 171px;
-  -webkit-transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-  -ms-transform: rotate(30deg);
-  -o-transform: rotate(30deg);
-  transform: rotate(30deg);
-}
-
-.instruction-container {
-  margin-bottom: 3rem;
-}
-
-.instruction-text {
-  font-size: 1.7rem;
-  letter-spacing: 1px;
-  font-weight: 200;
-  text-transform: uppercase;
-  text-align: right;
-  font-family: "Cormorant Garamond", serif;
-  color: #fdfacc;
-}
-
-.box {
-  padding: 0 1rem 2rem 1rem;
-  background-color: black;
-  box-shadow: 32px 30px 0px 0px rgba(255, 205, 0, 0.75);
-  -webkit-box-shadow: 32px 30px 0px 0px rgba(255, 205, 0, 0.75);
-  -moz-box-shadow: 32px 30px 0px 0px rgba(255, 205, 0, 0.75);
-
-  -webkit-animation-duration: 10s;
-  animation-duration: 10s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.form-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 10px 2rem 10px;
-}
 
 .input,
 .btn {
@@ -165,12 +74,114 @@ hr {
   transition: all 0.15s ease-out;
 }
 
+/* Header */
+
+.icon {
+  color: #ffcd00;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 2rem;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.heading {
+  display: inline-block;
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  padding: 2rem;
+}
+
+.logo {
+  display: inline-block;
+  width: 200px;
+  height: 171px;
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+/* Instructions */
+
+.instruction-container {
+  margin-bottom: 3rem;
+}
+
+.instruction-text {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: right;
+  font-family: "Cormorant Garamond", serif;
+  color: #fdfacc;
+}
+
+/* Text Generator Box  */
+
+.box {
+  padding: 0 1rem 2rem 1rem;
+  background-color: black;
+  box-shadow: 32px 30px 0px 0px #ffcd00;
+  -webkit-box-shadow: 32px 30px 0px 0px #ffcd00;
+  -moz-box-shadow: 32px 30px 0px 0px #ffcd00;
+
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10px 2rem 10px;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
   justify-content: start;
   max-width: 100%;
   padding: 10px;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+}
+
+.footer-navlink {
+  padding: 10px;
+  color: #ffcd00;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ffcd00;
 }
 
 /* Startup Animation */
