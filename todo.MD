@@ -1,6 +1,6 @@
 [x] - Add wutang lyric to large array
 [x] - CLEAN UP AND ORGANIZE CSS
-[] - MAKE IT RESPONSIVE
+[x] - MAKE IT RESPONSIVE
 [] - Update github and make a get me coffee account and add that to the below links
 [x] - Animate intro have top half drop down and text gen box slide in
 [x] - Clean up UI - Draw this out first in your note book.
