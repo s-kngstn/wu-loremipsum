@@ -259,7 +259,7 @@ select {
 
   .input,
   .btn {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0.3rem 1.3rem;
     width: 90%;
   }
@@ -276,11 +276,7 @@ select {
     font-size: 1rem;
   }
 
-  .footer-nav {
-    font-size: 10px;
-  }
-
-   .footer {
+  .footer {
     padding-top: 3rem;
   }
 }
