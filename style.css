@@ -228,7 +228,7 @@ select {
 
 
   .heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding-right: 0;
   }
 
@@ -254,7 +254,7 @@ select {
   }
 
   .content-container {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .input,
