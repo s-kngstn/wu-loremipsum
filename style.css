@@ -228,12 +228,12 @@ select {
 
 
   .heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding-right: 0;
   }
 
   .instruction-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .logo {
@@ -250,11 +250,11 @@ select {
   }
 
   .footer-nav {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .content-container {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .input,
@@ -273,11 +273,11 @@ select {
   }
 
   .instruction-text {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .footer-nav {
-    font-size: 8px;
+    font-size: 10px;
   }
 
    .footer {
