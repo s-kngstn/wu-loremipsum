@@ -40,7 +40,7 @@ const btn = document.querySelector("#btn");
 const content = document.querySelector(".content-container");
 new ClipboardJS(".copy");
 
-const shuffleWords = (arr) => {
+const shuffleWords = arr => {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -48,12 +48,9 @@ const shuffleWords = (arr) => {
   return arr;
 }
 
-const getWords = (words, wordAmount) => {
-  let removeSpecialChars = /[^\w\s]/gi;
-  return words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(removeSpecialChars, '');
-}
+const getWords = (words, wordAmount) => words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(/[^\w\s]/gi, '');
 
-const getSentences = (amount) => {
+const getSentences = amount => {
   let newSentenceArr = [];
   for (let i = 0; i < amount; i++) {
     let randomSentence =
@@ -63,7 +60,7 @@ const getSentences = (amount) => {
   return newSentenceArr.join(" ");
 }
 
-const getParas = (amount) => {
+const getParas = amount => {
   let para = [];
   for (let i = 0; i < amount; i++) {
     // Randomly output 5-10 sentence paragraphs
