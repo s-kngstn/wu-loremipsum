@@ -38,6 +38,7 @@ const sentences = [
 const selectionMenu = document.querySelector("#selection");
 const btn = document.querySelector("#btn");
 const content = document.querySelector(".content-container");
+const regexRemoveChars = /[^\w\s]/gi;
 new ClipboardJS(".copy");
 
 const shuffleWords = arr => {
@@ -48,7 +49,7 @@ const shuffleWords = arr => {
   return arr;
 }
 
-const getWords = (words, wordAmount) => words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(/[^\w\s]/gi, '');
+const getWords = (words, wordAmount) => words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(regexRemoveChars, '');
 
 const getSentences = amount => {
   let newSentenceArr = [];
