@@ -34,6 +34,22 @@ const sentences = [
   "Nightmares like Wes Craven people gunning, my third eye seen it coming, before it happened.",
   "Protect Ya Neck, my sword still remain imperial before I blast the mic, RZA scratch off the serial.",
   "It was the night before New Year's all through the projects, not a handgun was silent, not even a Tec.",
+  "First I'm gonna getcha, once I gotcha, I gat-cha, You could never capture the Method Man's stature.",
+  "I come with that ol' loco style from my vocal, Couldn't peep it with a pair of bi-focals.",
+  "I'm no joker! Play me like poker! Be on you like a house on fire! Smoke ya!",
+  "The Wu is comin thru, the outcome is critical, Muckin wit my style, is sort of like a Miracle.",
+  "One who just represent the Wu-Tang click with the game and soul, of an old school flick.",
+  "Cuz I don't know ya therefore show me what you know, I come sharp as a blade and I cut you slow.",
+  "How ya sound B? You're better off a quitter cuz I'm on the mound G, and it's a no-hitter.",
+  "My DJ the catcher, he's my man, anyway he's the one who devised the plan.",
+  "I be that insane one from the psycho ward, I'm on the trigger, plus I got the Wu-Tang sword.",
+  "I leave the mic in body bags, my rap style has, the force to leave you lost, like the tribe of Shabazz.",
+  "Murderous material, made by a madman, it's the mic wrecker, Inspector, bad man.",
+  "Dare to compare, get pierced just like an ear, the zoo-we-do-wop-bop strictly hardware.",
+  "Armed and geared cause I just broke out the prison charged by the system - for murdering the rhythm!",
+  "Now, lo and behold, another deadly episode, bound to catch another charge when I explode",
+  "Slammin a hype verse til ya head burst.",
+  "Approachin me, you out of respect, chops ya neck, I get vexed, like crashing up a phat-ol Lex'.",
 ];
 const selectionMenu = document.querySelector("#selection");
 const btn = document.querySelector("#btn");
@@ -48,6 +64,7 @@ const shuffleWords = arr => {
   }
   return arr;
 }
+
 
 const getWords = (words, wordAmount) => words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(regexRemoveChars, '');
 
