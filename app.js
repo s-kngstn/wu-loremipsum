@@ -51,24 +51,30 @@ const sentences = [
   "Slammin a hype verse til ya head burst.",
   "Approachin me, you out of respect, chops ya neck, I get vexed, like crashing up a phat-ol Lex'.",
 ];
+
 const selectionMenu = document.querySelector("#selection");
 const btn = document.querySelector("#btn");
 const content = document.querySelector(".content-container");
 const regexRemoveChars = /[^\w\s]/gi;
 new ClipboardJS(".copy");
 
-const shuffleWords = arr => {
+const shuffleWords = (arr) => {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
-}
+};
 
+const getWords = (words, wordAmount) =>
+  words
+    .split(" ")
+    .slice(0, wordAmount)
+    .join(" ")
+    .toLowerCase()
+    .replace(regexRemoveChars, "");
 
-const getWords = (words, wordAmount) => words.split(" ").slice(0, wordAmount).join(" ").toLowerCase().replace(regexRemoveChars, '');
-
-const getSentences = amount => {
+const getSentences = (amount) => {
   let newSentenceArr = [];
   for (let i = 0; i < amount; i++) {
     let randomSentence =
@@ -76,9 +82,9 @@ const getSentences = amount => {
     newSentenceArr.push(randomSentence);
   }
   return newSentenceArr.join(" ");
-}
+};
 
-const getParas = amount => {
+const getParas = (amount) => {
   let para = [];
   for (let i = 0; i < amount; i++) {
     // Randomly output 5-10 sentence paragraphs
@@ -86,7 +92,7 @@ const getParas = amount => {
     para.push(getSentences(sentenceCount));
   }
   return para;
-}
+};
 
 btn.addEventListener("click", () => {
   document.querySelector(".content-container").innerHTML = "";
