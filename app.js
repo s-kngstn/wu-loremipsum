@@ -56,15 +56,23 @@ const selectionMenu = document.querySelector("#selection");
 const btn = document.querySelector("#btn");
 const content = document.querySelector(".content-container");
 const regexRemoveChars = /[^\w\s]/gi;
-// inputValue will need to be added to localStorage at some point this week 18/10/22
 let inputValue = document.querySelector("#input");
-let val;
 new ClipboardJS(".copy");
 
+if (localStorage.getItem("Input Value") === null || inputValue.value === undefined) {
+  //...
+  inputValue.value = localStorage.setItem("Input Value", "3");
+  inputValue.value = localStorage.getItem("Input Value");
+} else {
+  inputValue.value = localStorage.getItem("Input Value");
+}
+
+
 inputValue.addEventListener('keyup', (e) => {
-  val = e.target.value;
+  inputValue.value = e.target.value;
   console.log(e.target.value)
-  return val;
+  
+  return inputValue.value;
 })
 
 const shuffleWords = (arr) => {
@@ -112,17 +120,19 @@ window.onload = () => {
 btn.addEventListener("click", () => {
   document.querySelector(".content-container").innerHTML = "";
   let newPara;
+  localStorage.removeItem("Input Value");
+  localStorage.setItem("Input Value", inputValue.value)
 
   if (selectionMenu.value === "words") {
     newPara = document.createElement("p");
-    newPara.innerText = getWords(shuffleWords(sentences).join(" "), val);
+    newPara.innerText = getWords(shuffleWords(sentences).join(" "), inputValue.value);
     content.append(newPara);
   } else if (selectionMenu.value === "sentences") {
     newPara = document.createElement("p");
-    newPara.innerText = getSentences(val);
+    newPara.innerText = getSentences(inputValue.value);
     content.append(newPara);
   } else if (selectionMenu.value === "paragraphs") {
-    getParas(val).map(function (para) {
+    getParas(inputValue.value).map(function (para) {
       newPara = document.createElement("p");
       const br = document.createElement("br");
       newPara.appendChild(document.createTextNode(para));
