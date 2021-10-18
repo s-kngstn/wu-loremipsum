@@ -56,6 +56,8 @@ const selectionMenu = document.querySelector("#selection");
 const btn = document.querySelector("#btn");
 const content = document.querySelector(".content-container");
 const regexRemoveChars = /[^\w\s]/gi;
+// inputValue will need to be added to localStorage at some point this week 18/10/22
+let inputValue = document.querySelector("#input").value;
 new ClipboardJS(".copy");
 
 const shuffleWords = (arr) => {
@@ -96,25 +98,24 @@ const getParas = (amount) => {
 
 window.onload = () => {
   let startingPara = document.createElement("p");
-  startingPara.innerText = getSentences("3");
+  startingPara.innerText = getSentences(inputValue);
   content.append(startingPara);
 };
 
 btn.addEventListener("click", () => {
   document.querySelector(".content-container").innerHTML = "";
-  let num = document.querySelector("#input").value;
   let newPara;
 
   if (selectionMenu.value === "words") {
     newPara = document.createElement("p");
-    newPara.innerText = getWords(shuffleWords(sentences).join(" "), num);
+    newPara.innerText = getWords(shuffleWords(sentences).join(" "), inputValue);
     content.append(newPara);
   } else if (selectionMenu.value === "sentences") {
     newPara = document.createElement("p");
-    newPara.innerText = getSentences(num);
+    newPara.innerText = getSentences(inputValue);
     content.append(newPara);
   } else if (selectionMenu.value === "paragraphs") {
-    getParas(num).map(function (para) {
+    getParas(inputValue).map(function (para) {
       newPara = document.createElement("p");
       const br = document.createElement("br");
       newPara.appendChild(document.createTextNode(para));
