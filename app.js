@@ -94,6 +94,12 @@ const getParas = (amount) => {
   return para;
 };
 
+window.onload = () => {
+  let startingPara = document.createElement("p");
+  startingPara.innerText = getSentences("3");
+  content.append(startingPara);
+};
+
 btn.addEventListener("click", () => {
   document.querySelector(".content-container").innerHTML = "";
   let num = document.querySelector("#input").value;
