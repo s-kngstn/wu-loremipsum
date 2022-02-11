@@ -5,7 +5,7 @@ const sentences = [
   "We got stick-up kids, corrupt cops, and pop rocks.",
   "Leave it up to me while I be livin' proof",
   "To kick the truth to the young black youth.",
-  "Cash rules everything around me, dollar dollar bill, ya'll.",
+  "Cache rules everything around me, dollar dollar bill, ya'll.",
   "I smoke on the mic like smoking Joe Frazier, the hell raiser, raising hell with the flavor.",
   "Terrorize the jam like troops in Pakistan, swinging through your town like your neighborhood Spiderman.",
   "So uhh, tic toc and keep ticking, while I get you flipping off what I'm kicking.",
